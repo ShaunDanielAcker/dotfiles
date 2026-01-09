@@ -51,7 +51,7 @@ vim.diagnostic.config({
 })
 
 -- python
-local user = os.getenv("USER")
+local user = os.getenv("USERNAME")
 vim.g.python_3_host_prog = "/home/" .. user .. "/miniconda3/envs/main_env/bin/python3"
 
 -- autosession
