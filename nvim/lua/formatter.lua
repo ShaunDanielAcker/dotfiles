@@ -4,11 +4,18 @@ require("conform").setup({
 		-- Conform will run multiple formatters sequentially
 		python = { "black" },
 		-- You can customize some of the format options for the filetype (:help conform.format)
-		javascript = { "eslint_d", "prettierd" },
-		typescript = { "eslint_d", "prettierd" },
+		javascript = { "prettier" },
+		typescript = { "prettier" },
 		json = { "fixjson" },
 		c = { "clangd " },
 		cpp = { "clang-format" },
+	},
+	formatters = {
+		prettier = {
+			prepend_args = function()
+				return { "--tab-width", "4" }
+			end,
+		},
 	},
 })
 
